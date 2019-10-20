@@ -7,3 +7,5 @@ Minimal live example is at https://energynow.onrender.com
 ## Contributing 
 
 Contribution guidelines coming soon. Are you a scientist, engineer, or programmer? Let's save the world together.
+
+Copyright © 2019
