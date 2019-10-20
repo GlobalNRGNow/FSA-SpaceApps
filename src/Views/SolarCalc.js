@@ -3,10 +3,10 @@ import React from 'react';
 class SolarCalc extends React.Component {
     constructor() {
         super();
+      const panel = this.props.DCSize
         this.state = {
             production: 0,
-            solarRadiation: this.props.SolarData.solrad_annual,
-            panelArea: this.props.DCSize,
+            panelArea: panel,
             performanceRatio: .35,
             costPerWatt: 1.6,
             utilityCostPerKwH: 0.20,
@@ -47,6 +47,17 @@ async componentDidMount () {
   this.state.calcSolarBreakEven()
   this.state.calcSolarCosts ()
   this.state.calcSolarPayoffDate()
+}
+
+render () {
+  return (
+    <div>
+      <p>Your break even: {this.state.breakEven}</p>
+      <p>You'll pay off your solar by: {this.state.SolarPayoffDate}</p>
+      <p>Your total system cost is: {this.state.totalSystemCost}</p>
+      <p>Your production is: {this.state.production}</p>
+    </div>
+  )
 }
 
 
